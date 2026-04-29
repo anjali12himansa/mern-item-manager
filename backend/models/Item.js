@@ -12,6 +12,16 @@ const itemSchema = new mongoose.Schema({
   // TODO (Student): Add the missing fields based on the instructions.md
   // 1. description
   // 2. category
-}, { timestamps: true });
+  description:{
+    type: String, 
+    required: true,
+  }, 
+  category : {
+    type: String, 
+    required: true,
+    enum: ['Electronics', 'Clothing', 'Food', 'Other']
+  }
+},
+ { timestamps: true });
 
 module.exports = mongoose.model('Item', itemSchema);

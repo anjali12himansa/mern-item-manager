@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
 
 // TODO (Student): Implement DELETE /api/items/:id route here
 
- router.DELETE("/:id", async (req, res) => {
+ router.delete("/:id", async (req, res) => {
       await Item.findByIdAndDelete(req,URLSearchParams.id);
       res.json({message: "item deleted" });
   });
